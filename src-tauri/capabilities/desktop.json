@@ -9,6 +9,9 @@
     "main"
   ],
   "permissions": [
-    "cli:default"
+    "cli:default",
+    "positioner:default",
+    "updater:default",
+    "window-state:default"
   ]
 }
