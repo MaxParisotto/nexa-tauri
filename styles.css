@@ -1,6 +1,3 @@
-.logo.leptos:hover {
-  filter: drop-shadow(0 0 2em #a82e20);
-}
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -35,6 +32,10 @@
 
 .logo.tauri:hover {
   filter: drop-shadow(0 0 2em #24c8db);
+}
+
+.logo.leptos:hover {
+  filter: drop-shadow(0 0 2em #a82e20);
 }
 
 .row {
@@ -77,6 +78,7 @@ button {
 button:hover {
   border-color: #396cd8;
 }
+
 button:active {
   border-color: #396cd8;
   background-color: #e8e8e8;
@@ -91,6 +93,52 @@ button {
   margin-right: 5px;
 }
 
+/* Chat specific styles with Tauri theme */
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+}
+
+.message {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+  background-color: #e3f2fd;
+  margin-left: 20px;
+}
+
+.message.assistant {
+  background-color: #ffffff;
+  margin-right: 20px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+}
+
+/* Dark theme support */
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -106,7 +154,24 @@ button {
     color: #ffffff;
     background-color: #0f0f0f98;
   }
+
   button:active {
     background-color: #0f0f0f69;
+  }
+
+  .chat-container {
+    background-color: #1f1f1f;
+  }
+
+  .messages {
+    background-color: #2f2f2f;
+  }
+
+  .message.user {
+    background-color: #1a3f5a;
+  }
+
+  .message.assistant {
+    background-color: #2f2f2f;
   }
 }
